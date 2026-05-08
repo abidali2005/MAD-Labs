@@ -1,0 +1,29 @@
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+import 'package:lab_7/main.dart';
+
+void main() {
+  testWidgets('Theme toggle test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const ThemeToggleApp());
+
+    // Verify that our app shows the correct title.
+    expect(find.text('Flutter Theme Switching'), findsOneWidget);
+    expect(find.text('Theme Toggle Demo'), findsOneWidget);
+
+    // Tap the theme toggle icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.dark_mode));
+    await tester.pump();
+
+    // Verify that the icon changed to light mode.
+    expect(find.byIcon(Icons.light_mode), findsOneWidget);
+  });
+}

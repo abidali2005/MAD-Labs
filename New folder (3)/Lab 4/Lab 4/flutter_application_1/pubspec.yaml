@@ -1,0 +1,28 @@
+name: flutter_application_1
+description: A simple xylophone app
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  audioplayers: ^0.20.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/note1.wav
+    - assets/sounds/note2.wav
+    - assets/sounds/note3.wav
+    - assets/sounds/note4.wav
+    - assets/sounds/note5.wav
+    - assets/sounds/note6.wav
+    - assets/sounds/note7.wav
